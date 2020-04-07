@@ -1,0 +1,202 @@
+
+/*
+*****Colors Used******
+#606368 - Light Grey
+#3c4042 - Mid Grey
+#202124 - Dark Grey
+#e980fc - purple
+
+
+
+*/
+
+body{
+    margin: 0;
+    color: white;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    text-align: center;
+    color: whitesmoke;
+    font-size: 3rem;
+    font-weight: 500;
+}
+.main-container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+.main-screen{
+    background-color: #202124;
+    height: 100%;
+    width: 75%;
+}
+.side-bar{
+    display: flex;
+    flex-flow: column;
+    background-color: #3c4042;
+    height: 100%;
+    width: 25%;
+}
+.question-card{
+    width: 40%;
+    height: 50%;
+    background-color: #606368;
+    border-radius: 5px;
+    position: relative;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+    overflow-y: auto;
+    flex-flow: column;
+    padding: 10px 20px;  
+    animation: exchange 1s forwards;
+    animation: exchange 1s  forwards;
+}
+.question-number{
+    text-align: center;
+}
+.question-title{
+    text-align: center;
+    font-size: 1.5em;
+}
+.options-space{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+.option-card{
+    min-width: 150px;
+    width: min-content;
+    min-height: 1.5em;
+    display: flex;
+    margin: 10px;
+    padding: 5px 5px;
+    background-color: #e980fc ;
+    justify-content: center;
+    transition-duration: 200ms;
+}
+.option-card:hover{
+    transform: scale(1.1);
+    font-style: bold;
+}
+.option-card:focus{
+    transform: scale(1.1);
+}
+.icon-btns{
+    width:70px;
+    height:70px;
+    margin: 30px;
+    transition-duration: 500ms;
+}
+.icon-btns:hover{
+    transform: scale(1.4);
+}
+.icon-btns:active{
+    transform: scale(1.2);
+    transition-duration: 200ms;
+}
+.btn-span{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.self-card{
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.self-photo-div{
+    display: flex;
+    width: 40%;
+    align-content: center;
+    justify-content: center;
+}
+.self-text-details{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+
+    
+}
+#self-photo-img{
+    margin: 20px;
+}
+#self-photo-img:hover{
+    transform: scale(1.2);
+}
+#myName,#myScore{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 0px;
+}
+
+#myName:hover, #myScore:hover{
+    font-size: 2.8em;
+    font-style: bold;
+    transition-duration: 100ms;
+}
+.individual-card{
+    display: flex;
+    margin: 5px 30px 10px 70px;
+    font-size: 1.5em;
+    transition-duration: 150ms;
+    padding: 10px;
+    justify-content: center;
+    align-content: center;
+    background-color: #202124 ;
+    overflow: auto;
+}
+.individual-card:hover{
+    transform: scale(1.1);
+}
+.friend-details{
+    margin: 0px;
+}
+.friend-photo-img{
+    height: 70px;
+    width: 70px;
+    margin-right: 40px;
+}
+.friend-photo-div{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.friends-card{
+    flex-grow: 1;
+    overflow: auto;
+}
+#add-friend-btn{
+    width:50px;
+    height:50px;
+    margin:15px;  
+}
+#add-friend-btn:hover{
+    transform: scale(1.2);
+    transition-duration: 150ms;
+}
+#add-friend-btn:active{
+    transform: scale(1.1);
+}
+@keyframes exchange{
+    0%{
+        
+    }
+    
+    100%{
+        right: 300%;
+    }
+}

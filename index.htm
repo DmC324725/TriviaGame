@@ -1,12 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia Game</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <h1>Trivia Game</h1>
+    <div class="main-container">
+        <div class="main-screen">
+            <h1>Trivia Game</h1>
+
+            <div class="question-card">
+                <p class="question-number">Question 1 of 20</p>
+                <p class="question-title">Which storage device is the fastest amongst all?</p>
+                <div class="options-space">
+                    <div class="option-card">
+                        <p class="option-text">HDD</p>
+                    </div>
+                    <div class="option-card">
+                        <p class="option-text">SSD</p>
+                    </div>
+                    <div class="option-card">
+                        <p class="option-text">NVMe</p>
+                    </div>
+                    <div class="option-card">
+                        <p class="option-text">SSHD</p>
+                    </div>
+                </div>
+            </div>
+            <span class="btn-span">
+                <svg class="icon-btns" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M12 2A10 10 0 1 0 22 12A10 10 0 0 0 12 2M18 11H13L14.81 9.19A3.94 3.94 0 0 0 12 8A4 4 0 1 0 15.86 13H17.91A6 6 0 1 1 12 6A5.91 5.91 0 0 1 16.22 7.78L18 6Z" />
+                </svg>
+                <svg class="icon-btns" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                </svg>
+            </span>
+        </div>
+        
+        <div class="side-bar">
+            <div class="self-card">
+                <div class="self-photo-div">
+                    <img id="self-photo-img" src="img/icons/1.png"/>
+                </div>
+                <div class="self-text-details">
+                    <p id="myName">Faisal</p>
+                    <p id="myScore">3/4</p>
+                </div>
+            </div>
+            <div class="friends-card">
+                <div class="individual-card">
+                    <div class="friend-photo-div">
+                        <img class="friend-photo-img" src="img/icons/2.png"/>
+                    </div>
+                    <div class="friend-text-details">
+                        <p class="friend-details">John</p>
+                        <p class="friend-details">2/3</p>
+                    </div>
+                </div>
+                <div class="individual-card">
+                    <div class="friend-photo-div">
+                        <img class="friend-photo-img" src="img/icons/3.png"/>
+                    </div>
+                    <div class="friend-text-details">
+                        <p class="friend-details">Stacy</p>
+                        <p class="friend-details">1/3</p>
+                    </div>
+                </div>
+                <div class="individual-card">
+                    <div class="friend-photo-div">
+                        <img class="friend-photo-img" src="img/icons/4.png"/>
+                    </div>
+                    <div class="friend-text-details">
+                        <p class="friend-details">Lisa</p>
+                        <p class="friend-details">3/3</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <svg id="add-friend-btn"  viewBox="0 0 24 24">
+                    <path fill="#e980fc" d="M17,13H13V17H11V13H7V11H11V7H13V11H17M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+                </svg>
+            </div>
+        </div>
+
+    </div>
+
 </body>
+
 </html>
