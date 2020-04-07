@@ -86,10 +86,10 @@ h1{
     transition-duration: 200ms;
 }
 .option-card:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
     font-style: bold;
 }
-.option-card:focus{
+.option-card:active{
     transform: scale(1.1);
 }
 .icon-btns{

@@ -1,5 +1,5 @@
 
-        debugger;
+        
         function addFriend(name) {
             const template = document.querySelector("template#friend-card-template");
             let newFriendCard = document.importNode(template.content, true);
@@ -11,7 +11,6 @@
         }
         function deleteFriend(event){
             
-            debugger;
             //Find the parent of the button
             let parentEl = event.currentTarget.parentElement;
 
@@ -29,6 +28,7 @@
             //Delete the parent from html
             parentEl.remove();
         }
+        
         let friendsarray = localStorage.getItem("friendNames");
         if(friendsarray == null){
             friendsarray = new Array();
@@ -79,6 +79,7 @@
                     }
                 ], {
                     duration: 700
+                
                     
                 });
         });
