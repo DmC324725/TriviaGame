@@ -9,7 +9,6 @@
 
 
 */
-
 body{
     margin: 0;
     color: white;
@@ -51,8 +50,7 @@ h1{
     overflow-y: auto;
     flex-flow: column;
     padding: 10px 20px;  
-    animation: exchange 1s forwards;
-    animation: exchange 1s  forwards;
+    animation: exchange 2s;
 }
 .question-number{
     text-align: center;
@@ -200,12 +198,13 @@ h1{
     transform: scale(1.2);
     transition-duration: 150ms;
 }
+
 @keyframes exchange{
     0%{
         
     }
     
     100%{
-        right: 300%;
+        transform: translateX(-1000);
     }
 }

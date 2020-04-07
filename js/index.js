@@ -1,5 +1,5 @@
 
-        
+        debugger;
         function addFriend(name) {
             const template = document.querySelector("template#friend-card-template");
             let newFriendCard = document.importNode(template.content, true);
@@ -9,6 +9,26 @@
             newFriendCard.querySelector(".friend-details").innerHTML = name;
             document.querySelector(".friends-card").appendChild(newFriendCard);
         }
+        function deleteFriend(event){
+            
+            debugger;
+            //Find the parent of the button
+            let parentEl = event.currentTarget.parentElement;
+
+            //Find the name from parents child
+            let friendNameDelete = parentEl.querySelector(".friend-details").innerHTML;
+
+            //Delete that name from Friendsarray
+            const index = friendsarray.indexOf(friendNameDelete);
+            if (index > -1) {
+                friendsarray.splice(index, 1);
+            }
+            //Make changes to the local storage
+            localStorage.setItem("friendNames",JSON.stringify(friendsarray));
+
+            //Delete the parent from html
+            parentEl.remove();
+        }
         let friendsarray = localStorage.getItem("friendNames");
         if(friendsarray == null){
             friendsarray = new Array();
@@ -16,7 +36,6 @@
         else{
             friendsarray = JSON.parse(friendsarray);
         }
-        debugger;
         for (key in friendsarray){
             addFriend(friendsarray[key]);
         }
@@ -34,12 +53,17 @@
 
         let addFriendBtn = document.getElementById("add-friend-btn");
         addFriendBtn.addEventListener("click", () => {
-            
             let friendName = prompt("Enter your friend's name").substring(0,8);
-            friendsarray.push(friendName);
-            localStorage.setItem("friendNames",JSON.stringify(friendsarray));
-            addFriend(friendName);
-            
+            if(friendName != ""){
+                friendsarray.push(friendName);
+                localStorage.setItem("friendNames",JSON.stringify(friendsarray));
+                addFriend(friendName);
+            }
         });
-
+        let elements = document.querySelectorAll(".delete-btn");
+        for (let i = 0; i < elements.length; i++) {
+            let delbtn = elements[i];
+            delbtn.addEventListener("click", deleteFriend);
+        }
+        
         
