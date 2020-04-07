@@ -65,5 +65,24 @@
             let delbtn = elements[i];
             delbtn.addEventListener("click", deleteFriend);
         }
+        document.getElementById("exchange-btn").addEventListener("click",()=>{
+            document.querySelector(".question-card").animate(
+                [
+                    {
+                        transform: 'translateX(0px)'
+                    },
+                    {
+                        transform: 'translateX(-1000px)'
+                    }
+                    ,{
+                        transform: 'translateX(0px)'
+                    }
+                ], {
+                    duration: 700
+                    
+                });
+        });
+        
+        
         
         

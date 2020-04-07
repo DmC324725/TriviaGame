@@ -27,6 +27,8 @@ h1{
     width: 100vw;
 }
 .main-screen{
+    display: flex;
+    flex-direction: column;
     background-color: #202124;
     height: 100%;
     width: 75%;
@@ -38,19 +40,24 @@ h1{
     height: 100%;
     width: 25%;
 }
+.question-div{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    transition-duration: 2s;
+}
+
 .question-card{
     width: 40%;
-    height: 50%;
     background-color: #606368;
     border-radius: 5px;
-    position: relative;
-    left: 50%;
+    padding-bottom: 10px;
     display: flex;
-    transform: translateX(-50%);
     overflow-y: auto;
     flex-flow: column;
     padding: 10px 20px;  
-    animation: exchange 2s;
+
 }
 .question-number{
     text-align: center;
@@ -88,7 +95,7 @@ h1{
 .icon-btns{
     width:70px;
     height:70px;
-    margin: 30px;
+    margin: 15px 30px;
     transition-duration: 500ms;
 }
 .icon-btns:hover{
@@ -198,13 +205,45 @@ h1{
     transform: scale(1.2);
     transition-duration: 150ms;
 }
+.answer-div{
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+#answer-text{
+    height: auto;
+    min-width: 250px;
+    width: fit-content;
+    border-radius: 50px;
+    background-color: #e980fc;
+    padding: 10px;
+    font-size: 1.6em;
+    text-align: center;
+    transition-duration: 200ms;
+}
+#answer-text:hover{
+    transform: scale(1.2);
+}
 
-@keyframes exchange{
+@keyframes exchange1{
     0%{
         
     }
+    50%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes exchange2{
+    0%{
+       left: -1000px; 
+    }
     
     100%{
-        transform: translateX(-1000);
+        left: 100px;
     }
 }
