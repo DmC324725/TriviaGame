@@ -84,6 +84,13 @@
                 });
         });
         
+
+        //Service Worker Registration
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/js/serviceworker.js', {
+              scope: '/'
+            });
+          }
         
         
         
