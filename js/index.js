@@ -87,9 +87,9 @@
 
         //Service Worker Registration
         if('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/js/serviceworker.js', {
+            navigator.serviceWorker.register('/serviceworker.js', {
               scope: '/'
-            });
+            }).then(function() { console.log("Service Worker Registered"); });
           }
         
         
