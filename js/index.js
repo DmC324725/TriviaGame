@@ -8,7 +8,7 @@
             newFriendCard.querySelector(".friend-photo-img").setAttribute("src","img/icons/"+randomNum+".png");
             newFriendCard.querySelector(".friend-details").innerHTML = name;
              //STEP 2
-             conn = peer.connect(name+'_1A2bcC2L');
+            let conn = peer.connect(name+'_1A2bcC2L');
              // var conn = peer.connect('dc_7iun3cuzuho');
              // on open will be launch when you successfully connect to PeerServer
              conn.on('open', function(){
@@ -37,7 +37,6 @@
             parentEl.remove();
         }
         let peer;
-        let conn;
         let friendsarray = localStorage.getItem("friendNames");
         if(friendsarray == null){
             friendsarray = new Array();
