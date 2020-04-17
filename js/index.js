@@ -1,5 +1,6 @@
 
-       
+        let peer;
+        let conn;
         function addFriend(name) {
             const template = document.querySelector("template#friend-card-template");
             let newFriendCard = document.importNode(template.content, true);
@@ -8,7 +9,7 @@
             newFriendCard.querySelector(".friend-photo-img").setAttribute("src","img/icons/"+randomNum+".png");
             newFriendCard.querySelector(".friend-details").innerHTML = name;
              //STEP 2
-            let conn = peer.connect(name+'_1A2bcC2L');
+            conn = peer.connect(name+'_1A2bcC2L');
              // var conn = peer.connect('dc_7iun3cuzuho');
              // on open will be launch when you successfully connect to PeerServer
              conn.on('open', function(){
@@ -36,7 +37,7 @@
             //Delete the parent from html
             parentEl.remove();
         }
-        let peer;
+       
         let friendsarray = localStorage.getItem("friendNames");
         if(friendsarray == null){
             friendsarray = new Array();
