@@ -12,7 +12,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     
-    <script src="https://unpkg.com/peerjs@1.0.0/dist/peerjs.min.js"></script>
 </head>
 
 <body>
@@ -22,26 +21,26 @@
             <div class="question-div">
                
                 <div class="question-card">
-                    <p class="question-number">Question 1 of 20</p>
-                    <p class="question-title">Which storage device is the fastest amongst all?</p>
+                    <p class="question-number" id="question-num">Question 1 of 20</p>
+                    <p class="question-title" id="questiontxt">Which storage device is the fastest amongst all?</p>
                     <div class="options-space">
                         <div class="option-card">
-                            <p class="option-text">HDD</p>
+                            <p class="option-text" id="opt1">HDD</p>
                         </div>
                         <div class="option-card">
-                            <p class="option-text">SSD</p>
+                            <p class="option-text" id="opt2">SSD</p>
+                        </div>
+                        <div class="option-card" >
+                            <p class="option-text" id="opt3">NVMe</p>
                         </div>
                         <div class="option-card">
-                            <p class="option-text">NVMe</p>
-                        </div>
-                        <div class="option-card">
-                            <p class="option-text">SSHD</p>
+                            <p class="option-text" id="opt4">SSHD</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="answer-div">
-                <p id="answer-text">Sample Answer</p>
+                <p id="answer-text"></p>
             </div>
             <span class="btn-span">
                 <svg class="icon-btns" id="exchange-btn" viewBox="0 0 24 24">
@@ -62,7 +61,7 @@
                 </div>
                 <div class="self-text-details">
                     <p id="myName">User</p>
-                    <p id="myScore">30</p>
+                    <p id="myScore">0</p>
                 </div>
             </div>
             <div class="friends-card">
