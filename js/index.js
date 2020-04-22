@@ -111,13 +111,13 @@ function changeQuestion() {
 }
 
 //Service Worker Registration
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/serviceworker.js', {
-        scope: '/'
-    }).then(function () {
-        console.log("Service Worker Registered");
-    });
-}
+// if ('serviceWorker' in navigator) {
+//     navigator.serviceWorker.register('/serviceworker.js', {
+//         scope: '/'
+//     }).then(function () {
+//         console.log("Service Worker Registered");
+//     });
+// }
 
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
@@ -177,13 +177,31 @@ function fillQuestion(data) {
 }
 
 function submitAnswer() {
+    debugger;
+    if(questionnum >20){
+        if(confirm("Your final score is " + score + ". Would you like to play again?" )){
+            location.reload();
+           
+        }
+        return;
+        
+    }
     if (answer == selectedAnswer) {
         score += 10;
     } else {
         score -= 5;
     }
     document.getElementById("myScore").innerHTML = score;
+    questionnum++;
+    if(questionnum <= 20){
     changeQuestion();
+    document.getElementById("question-num").innerHTML = "Question "+ questionnum + " of 20";
+    } else {
+        if(confirm("Your final score is " + score + ". Would you like to play again?" )){
+            location.reload();
+        }
+        questionnum= 21;
+    }
 }
 
 document.getElementById("next-btn").addEventListener("click", submitAnswer);
